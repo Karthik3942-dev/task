@@ -197,6 +197,15 @@ body {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Animation delay utilities */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
 /* Vibrant dark theme colors */
 :root {
   --dark-bg-primary: #0f1129;
