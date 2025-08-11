@@ -448,7 +448,7 @@ export default function ProjectTasksViewer() {
       <div className="flex-1 overflow-y-auto p-4">
         {/* Project Selection */}
         <div className="mb-4">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-3">
             Select Project
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -458,22 +458,22 @@ export default function ProjectTasksViewer() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedProjectId(project.id)}
-                className={`liquid-glass-card text-left transition-all ${
+                className={`enhanced-glass-card text-left transition-all ${
                   selectedProjectId === project.id
-                    ? "border-purple-500 bg-purple-50 dark:bg-purple-500/20"
-                    : "hover:border-purple-300 dark:hover:border-purple-500/50"
+                    ? "border-purple-500 bg-purple-50/80 dark:bg-purple-500/20 ring-2 ring-purple-200 dark:ring-purple-400/30"
+                    : "hover:border-purple-300 dark:hover:border-purple-500/50 hover:shadow-xl"
                 }`}
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <h3 className="font-medium text-gray-900 dark:text-gray-100">
+                  <div className="w-3 h-3 bg-gradient-to-r from-slate-500 to-purple-500 rounded-full shadow-sm"></div>
+                  <h3 className="font-medium text-slate-900 dark:text-slate-100">
                     {project.name}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 mt-3 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex items-center gap-4 mt-3 text-xs text-slate-500 dark:text-slate-400">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
                     {project.deadline}
