@@ -202,7 +202,7 @@ const AdminTicketsPage = () => {
   };
 
   return (
-    <div className="h-full bg-gradient-to-br from-cyan-100/95 to-orange-100/95 dark:bg-gradient-to-br dark:from-black/95 dark:to-black/90 p-6">
+    <div className="h-full bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20 p-6">
       <h1 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">All Tickets</h1>
 
       <div className="flex gap-4 mb-4 flex-wrap">
@@ -255,7 +255,7 @@ const AdminTicketsPage = () => {
         <table className="min-w-[1200px] w-full border-collapse text-sm text-left">
           <thead className="bg-white/50 dark:bg-black/50">
             <tr>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Ticket ID</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Ticket ID</th>
               <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Title</th>
               <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Description</th>
               <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Priority</th>
@@ -271,8 +271,8 @@ const AdminTicketsPage = () => {
           </thead>
           <tbody>
             {filteredTickets.map((ticket) => (
-              <tr key={ticket.id} className="hover:bg-cyan-50 dark:hover:bg-orange-900/20">
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.projectTicketId}</td>
+              <tr key={ticket.id} className="hover:bg-purple-50 dark:hover:bg-purple-900/20">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">{ticket.projectTicketId}</td>
                 <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.title}</td>
                 <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.description}</td>
                 <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.priority}</td>
@@ -333,7 +333,7 @@ const AdminTicketsPage = () => {
                 </td>
                 <td className="p-2 border border-cyan-300 dark:border-orange-500/40 space-x-2">
                   <button
-                    className="text-cyan-600 dark:text-cyan-400 underline"
+                    className="text-purple-600 dark:text-purple-400 underline"
                     onClick={() => handleEditClick(ticket)}
                   >
                     Edit
