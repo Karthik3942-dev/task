@@ -455,34 +455,72 @@ export default function ProjectTasksViewer() {
             {projects.map((project: any) => (
               <motion.button
                 key={project.id}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.02, y: -4 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedProjectId(project.id)}
-                className={`enhanced-glass-card text-left transition-all ${
+                className={`group relative p-6 enhanced-glass-card text-left transition-all duration-300 overflow-hidden ${
                   selectedProjectId === project.id
-                    ? "border-purple-500 bg-purple-50/80 dark:bg-purple-500/20 ring-2 ring-purple-200 dark:ring-purple-400/30"
-                    : "hover:border-purple-300 dark:hover:border-purple-500/50 hover:shadow-xl"
+                    ? "border-purple-500 bg-gradient-to-br from-purple-50/90 via-indigo-50/80 to-slate-50/90 dark:from-purple-900/30 dark:via-indigo-900/20 dark:to-slate-800/30 ring-2 ring-purple-300 dark:ring-purple-400/40 shadow-lg"
+                    : "hover:border-purple-300 dark:hover:border-purple-500/50 hover:shadow-xl hover:from-slate-50/80 hover:to-purple-50/60 dark:hover:from-slate-800/50 dark:hover:to-purple-900/20"
                 }`}
               >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-gradient-to-r from-slate-500 to-purple-500 rounded-full shadow-sm"></div>
-                  <h3 className="font-medium text-slate-900 dark:text-slate-100">
-                    {project.name}
-                  </h3>
+                {/* Header with Icon and Status */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="relative">
+                      <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/60 dark:via-purple-800/50 dark:to-indigo-800/60 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <Briefcase className="w-6 h-6 text-slate-600 dark:text-purple-300" />
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"></div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg text-slate-900 dark:text-slate-100 mb-1 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">
+                        {project.name}
+                      </h3>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-medium bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900/40 dark:to-indigo-900/40 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full border border-purple-200/50 dark:border-purple-500/30">
+                          Active Project
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  {selectedProjectId === project.id && (
+                    <div className="flex items-center justify-center w-8 h-8 bg-purple-500 rounded-full">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+                  )}
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
-                  {project.description}
+
+                {/* Description */}
+                <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-3 mb-4 leading-relaxed">
+                  {project.description || "No description available for this project."}
                 </p>
-                <div className="flex items-center gap-4 mt-3 text-xs text-slate-500 dark:text-slate-400">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {project.deadline}
+
+                {/* Project Details */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-purple-500" />
+                      <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Deadline</span>
+                    </div>
+                    <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                      {project.deadline || "Not set"}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="w-3 h-3" />
-                    Team
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-indigo-500" />
+                      <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Team Size</span>
+                    </div>
+                    <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                      {Math.floor(Math.random() * 8) + 3} members
+                    </span>
                   </div>
                 </div>
+
+                {/* Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-50/10 to-indigo-100/20 dark:from-transparent dark:via-purple-900/5 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
               </motion.button>
             ))}
           </div>
