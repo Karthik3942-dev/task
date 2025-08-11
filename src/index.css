@@ -1159,6 +1159,10 @@ textarea {
   animation: glassPulse 3s ease-in-out infinite;
 }
 
+.dark .animate-glass-pulse {
+  animation: glassPulseDark 3s ease-in-out infinite;
+}
+
 /* Moving border effect */
 .moving-border {
   position: relative;
