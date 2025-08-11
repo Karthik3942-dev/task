@@ -245,20 +245,26 @@ export default function ProjectDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:bg-gradient-to-br dark:from-slate-800 dark:via-purple-900/40 dark:to-indigo-900/60 relative overflow-hidden">
+      {/* Floating background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-300/20 dark:bg-indigo-500/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-slate-200/10 dark:bg-slate-600/5 rounded-full blur-3xl animate-pulse animation-delay-4000"></div>
+      </div>
       {/* Enhanced Header */}
-      <div className="liquid-glass border-b border-gray-200 dark:border-purple-500/30 shadow-sm">
+      <div className="liquid-glass border-b border-slate-200/50 dark:border-purple-500/30 shadow-lg backdrop-blur-xl relative z-10">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-14 h-14 bg-gradient-to-br from-slate-600 via-purple-600 to-indigo-700 rounded-2xl flex items-center justify-center shadow-lg">
               <Briefcase className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent tracking-tight">
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-700 via-purple-600 to-indigo-600 bg-clip-text text-transparent tracking-tight">
                   Project Dashboard
                 </h1>
-                <p className="text-purple-600/70 dark:text-purple-300/70 font-medium">
+                <p className="text-slate-600/80 dark:text-purple-300/70 font-medium">
                   Manage and track all your projects
                 </p>
               </div>
@@ -288,7 +294,7 @@ export default function ProjectDashboard() {
 
               <button
                 onClick={() => setShowNewProjectModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-slate-600 via-purple-600 to-indigo-700 text-white rounded-xl hover:from-slate-700 hover:via-purple-700 hover:to-indigo-800 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <Plus className="w-4 h-4" />
                 <span className="hidden sm:inline font-medium">New Project</span>
@@ -305,13 +311,13 @@ export default function ProjectDashboard() {
                 placeholder="Search projects, descriptions, or team names..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-stone-200/50 dark:border-gray-700/50 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
+                className="w-full pl-12 pr-4 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-purple-500/30 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all shadow-sm"
               />
             </div>
 
             <div className="flex items-center gap-3">
-              <button className="p-4 border border-stone-200/50 dark:border-gray-700/50 rounded-xl hover:bg-stone-50/50 dark:hover:bg-gray-700/50 transition-all shadow-sm backdrop-blur-sm">
-                <Filter className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              <button className="p-4 border border-slate-200/50 dark:border-purple-500/30 rounded-xl hover:bg-slate-50/50 dark:hover:bg-purple-700/50 transition-all shadow-sm backdrop-blur-sm">
+                <Filter className="w-5 h-5 text-slate-600 dark:text-purple-300" />
               </button>
             </div>
           </div>
