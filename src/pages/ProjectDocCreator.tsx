@@ -12,11 +12,16 @@ import "react-quill/dist/quill.snow.css";
 // Import ReactQuill directly since warning is handled globally
 import ReactQuill from "react-quill";
 
-// Suppress ReactQuill findDOMNode deprecation warning
+// Suppress ReactQuill findDOMNode deprecation warning for this component
 React.useEffect(() => {
   const originalConsoleWarn = console.warn;
   console.warn = (...args) => {
-    if (args[0]?.includes?.('findDOMNode is deprecated')) {
+    // Only suppress the specific ReactQuill findDOMNode warning
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('findDOMNode is deprecated') &&
+      args[0].includes('ReactQuill')
+    ) {
       return; // Suppress ReactQuill findDOMNode warning
     }
     originalConsoleWarn.apply(console, args);
