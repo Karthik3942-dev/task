@@ -473,26 +473,26 @@ export default function ProjectDashboard() {
                       </div>
                     </div>
 
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">
                       {project.name}
                     </h2>
 
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
                     {/* Progress Bar */}
                     <div className="mb-4">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-xs font-medium text-gray-600 dark:text-gray-400">Progress</span>
-                        <span className="text-xs font-bold text-gray-900 dark:text-gray-100">{progress}%</span>
+                        <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Progress</span>
+                        <span className="text-xs font-bold text-slate-900 dark:text-slate-100">{progress}%</span>
                       </div>
-                      <div className="w-full bg-stone-200/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-slate-200/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-full h-2 overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${progress}%` }}
                           transition={{ duration: 1, delay: index * 0.1 }}
-                          className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-sm"
+                          className="h-full bg-gradient-to-r from-slate-500 via-purple-500 to-indigo-600 rounded-full shadow-sm"
                         />
                       </div>
                     </div>

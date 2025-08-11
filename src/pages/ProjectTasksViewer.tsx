@@ -167,10 +167,10 @@ export default function ProjectTasksViewer() {
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="liquid-glass-card p-3 mb-3 cursor-pointer hover:shadow-md transition-shadow"
+        className="enhanced-glass-card p-3 mb-3 cursor-pointer hover:shadow-md transition-shadow"
       >
         <div className="flex items-start justify-between mb-2">
-          <h4 className="font-medium text-gray-900 dark:text-gray-100 text-sm line-clamp-2">
+          <h4 className="font-medium text-slate-900 dark:text-slate-100 text-sm line-clamp-2">
             {task.title}
           </h4>
           <button className="text-gray-400 hover:text-gray-600 p-0.5">
@@ -179,7 +179,7 @@ export default function ProjectTasksViewer() {
         </div>
 
         {task.description && (
-          <p className="text-xs text-gray-600 dark:text-gray-400 mb-2 line-clamp-2">
+          <p className="text-xs text-slate-600 dark:text-slate-300 mb-2 line-clamp-2">
             {task.description}
           </p>
         )}
