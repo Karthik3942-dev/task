@@ -356,66 +356,66 @@ export default function ProjectDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="liquid-glass-card p-6 hover:shadow-xl transition-all duration-300"
+            className="enhanced-glass-card p-6 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 rounded-xl flex items-center justify-center">
-                <Layers3 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/50 dark:via-purple-800/40 dark:to-indigo-800/50 rounded-xl flex items-center justify-center shadow-md">
+                <Layers3 className="w-6 h-6 text-slate-600 dark:text-purple-300" />
               </div>
-              <span className="text-2xl font-bold text-gray-900 dark:text-purple-100">{projects.length}</span>
+              <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">{projects.length}</span>
             </div>
-            <h3 className="font-semibold text-gray-900 dark:text-purple-100">Total Projects</h3>
-            <p className="text-sm text-gray-600 dark:text-purple-300/80">Active and completed</p>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100">Total Projects</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-300">Active and completed</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="liquid-glass-card p-6 hover:shadow-xl transition-all duration-300"
+            className="enhanced-glass-card p-6 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 rounded-xl flex items-center justify-center">
-                <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/50 dark:via-purple-800/40 dark:to-indigo-800/50 rounded-xl flex items-center justify-center shadow-md">
+                <Users className="w-6 h-6 text-slate-600 dark:text-purple-300" />
               </div>
-              <span className="text-2xl font-bold text-gray-900 dark:text-purple-100">{teams.length}</span>
+              <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">{teams.length}</span>
             </div>
-            <h3 className="font-semibold text-gray-900 dark:text-purple-100">Active Teams</h3>
-            <p className="text-sm text-gray-600 dark:text-purple-300/80">Working on projects</p>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100">Active Teams</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-300">Working on projects</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="liquid-glass-card p-6 hover:shadow-xl transition-all duration-300"
+            className="enhanced-glass-card p-6 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 rounded-xl flex items-center justify-center">
-                <Target className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/50 dark:via-purple-800/40 dark:to-indigo-800/50 rounded-xl flex items-center justify-center shadow-md">
+                <Target className="w-6 h-6 text-slate-600 dark:text-purple-300" />
               </div>
-              <span className="text-2xl font-bold text-gray-900 dark:text-purple-100">{employees.length}</span>
+              <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">{employees.length}</span>
             </div>
-            <h3 className="font-semibold text-gray-900 dark:text-purple-100">Team Members</h3>
-            <p className="text-sm text-gray-600 dark:text-purple-300/80">Across all teams</p>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100">Team Members</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-300">Across all teams</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="liquid-glass-card p-6 hover:shadow-xl transition-all duration-300"
+            className="enhanced-glass-card p-6 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 rounded-xl flex items-center justify-center">
-                <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/50 dark:via-purple-800/40 dark:to-indigo-800/50 rounded-xl flex items-center justify-center shadow-md">
+                <Activity className="w-6 h-6 text-slate-600 dark:text-purple-300" />
               </div>
-              <span className="text-2xl font-bold text-gray-900 dark:text-purple-100">
+              <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                 {projects.length > 0 ? Math.round(projects.reduce((acc, p) => acc + getProjectProgress(p), 0) / projects.length) : 0}%
               </span>
             </div>
-            <h3 className="font-semibold text-gray-900 dark:text-purple-100">Avg Progress</h3>
-            <p className="text-sm text-gray-600 dark:text-purple-300/80">Across all projects</p>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100">Avg Progress</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-300">Across all projects</p>
           </motion.div>
         </div>
 
