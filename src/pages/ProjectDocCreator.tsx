@@ -509,6 +509,15 @@ const ProjectDocCreator = () => {
       return;
     }
 
+    // Check Firebase connection
+    if (!db) {
+      toast.error("Cannot save document - Firebase not available", {
+        duration: 4000,
+        icon: "🚫",
+      });
+      return;
+    }
+
     try {
       setLoading(true);
       const docId = selectedDoc?.id || `${selectedProject.id}_${uuidv4()}`;
