@@ -24,6 +24,7 @@ import Analytics from "./pages/Analytics";
 import Reports from "./pages/Reports";
 import { View } from "lucide-react";
 import PerformMatrix from "./pages/PerformMatrix";
+import DashboardPage from "./pages/DashboardPage";
 import Makeleader from "./pages/Makeleader";
 import FeedbackPage from "./pages/FeedbackPage";
 import { ConnectionStatusIndicator } from "./components/ConnectionStatusIndicator";
@@ -68,6 +69,7 @@ function App() {
           <Route path="users" element={<UserManagement />} />
           <Route path="AddUsers" element={<AddUsers />} />
           <Route path="PerformMatrix" element={<PerformMatrix />} />
+          <Route path="DashboardPage" element={<DashboardPage />} />
           <Route path="TeamManager" element={<TeamManager />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="projects" element={<Projects />} />
