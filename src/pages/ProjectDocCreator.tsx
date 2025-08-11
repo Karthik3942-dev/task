@@ -539,7 +539,18 @@ const ProjectDocCreator = () => {
       fetchDocuments(selectedProject.id);
     } catch (error) {
       console.error("Error saving document:", error);
-      toast.error("Failed to save document");
+
+      // Handle specific Firebase errors
+      if (error.message?.includes('Failed to fetch') || error.code === 'unavailable') {
+        toast.error("Network error - document not saved. Please try again.", {
+          duration: 5000,
+          icon: "🌐",
+        });
+      } else if (error.code === 'permission-denied') {
+        toast.error("Permission denied - cannot save document");
+      } else {
+        toast.error("Failed to save document");
+      }
     } finally {
       setLoading(false);
     }
