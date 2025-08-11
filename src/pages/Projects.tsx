@@ -256,37 +256,38 @@ function Projects() {
   }
 
   return (
-    <div className="h-full bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20 flex flex-col relative overflow-hidden">
+    <div className="h-full bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-800 dark:via-purple-900/40 dark:to-indigo-900/60 flex flex-col relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-br from-violet-200/20 to-purple-200/20 dark:from-violet-900/10 dark:to-purple-900/10 rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-br from-indigo-200/20 to-violet-200/20 dark:from-indigo-900/10 dark:to-violet-900/10 rounded-full blur-3xl opacity-60"></div>
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-purple-200/40 to-indigo-300/50 dark:from-slate-700/20 dark:via-purple-800/30 dark:to-indigo-900/40 rounded-full blur-3xl opacity-70"></div>
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-to-br from-purple-200/30 via-indigo-200/40 to-slate-300/50 dark:from-purple-800/20 dark:via-indigo-900/30 dark:to-slate-700/40 rounded-full blur-3xl opacity-70"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-indigo-200/20 via-purple-200/30 to-slate-200/40 dark:from-indigo-800/15 dark:via-purple-900/25 dark:to-slate-800/35 rounded-full blur-2xl opacity-60"></div>
       </div>
 
       {/* Header */}
-      <div className="relative z-10 liquid-glass border-b border-gray-200 dark:border-purple-500/30 px-6 py-4 shadow-lg">
+      <div className="relative z-10 bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-indigo-500/20 px-6 py-4 shadow-xl">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl shadow-lg">
+              <div className="p-3 bg-gradient-to-br from-slate-600 via-purple-600 to-indigo-700 rounded-2xl shadow-lg ring-2 ring-white/20">
                 <Target className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 dark:from-purple-400 dark:via-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-700 via-purple-700 to-indigo-800 dark:from-slate-300 dark:via-purple-300 dark:to-indigo-200 bg-clip-text text-transparent tracking-tight">
                   Projects
                 </h1>
-                <p className="text-xs text-purple-600/70 dark:text-purple-300/70 font-medium">
+                <p className="text-sm text-slate-600/80 dark:text-slate-300/80 font-medium tracking-wide">
                   Manage your projects
                 </p>
               </div>
             </div>
             
-            <div className={`px-3 py-1.5 rounded-xl text-xs font-bold border backdrop-blur-sm flex items-center gap-2 ${
+            <div className={`px-4 py-2 rounded-2xl text-sm font-semibold border backdrop-blur-sm flex items-center gap-2 shadow-sm ${
               connectionStatus === 'connected'
-                ? 'bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-200/60 dark:border-emerald-500/30'
+                ? 'bg-emerald-50/90 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-200/70 dark:border-emerald-500/30 ring-1 ring-emerald-200/50'
                 : connectionStatus === 'connecting'
-                ? 'bg-amber-50/80 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-200/60 dark:border-amber-500/30'
-                : 'bg-gray-50/80 dark:bg-gray-500/10 text-gray-600 dark:text-gray-400 border-gray-200/60 dark:border-gray-500/30'
+                ? 'bg-amber-50/90 dark:bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-200/70 dark:border-amber-500/30 ring-1 ring-amber-200/50'
+                : 'bg-slate-50/90 dark:bg-slate-500/15 text-slate-700 dark:text-slate-300 border-slate-200/70 dark:border-slate-500/30 ring-1 ring-slate-200/50'
             }`}>
               <div className={`w-2 h-2 rounded-full ${
                 connectionStatus === 'connected' ? 'bg-emerald-500' :
