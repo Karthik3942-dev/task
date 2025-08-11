@@ -564,7 +564,13 @@ const ProjectDocCreator = () => {
   ];
 
   return (
-    <div className="h-full bg-gradient-to-br from-cyan-100/95 to-orange-100/95 dark:bg-gradient-to-br dark:from-black/95 dark:to-black/90 flex flex-col">
+    <div className="h-full bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:bg-gradient-to-br dark:from-slate-800 dark:via-purple-900/40 dark:to-indigo-900/60 flex flex-col relative overflow-hidden">
+      {/* Floating background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-300/20 dark:bg-indigo-500/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-slate-200/10 dark:bg-slate-600/5 rounded-full blur-3xl animate-pulse animation-delay-4000"></div>
+      </div>
       <PageHeader
         title="Creative Doc Studio"
         subtitle={selectedProject ? `• ${selectedProject.name}` : ""}
@@ -604,14 +610,14 @@ const ProjectDocCreator = () => {
 
       <div className="flex-1 overflow-hidden flex">
         {/* Enhanced Sidebar */}
-        <div className="w-80 border-r border-gray-200 dark:border-purple-500/30 bg-white/80 dark:bg-black/95 backdrop-blur-xl flex flex-col">
+        <div className="w-80 border-r border-slate-200/50 dark:border-purple-500/30 bg-white/80 dark:bg-slate-900/95 backdrop-blur-xl flex flex-col relative z-10 shadow-xl">
           {/* Project Selection */}
-          <div className="px-6 py-4 border-b border-gray-200 dark:border-purple-500/30">
+          <div className="px-6 py-4 border-b border-slate-200/50 dark:border-purple-500/30">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-slate-600 via-purple-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg">
                 <Briefcase className="w-5 h-5 text-white" />
               </div>
-              <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+              <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 Select Project
               </h2>
             </div>
@@ -624,8 +630,8 @@ const ProjectDocCreator = () => {
                   onClick={() => handleProjectSelect(project)}
                   className={`w-full text-left p-3 rounded-xl border-2 transition-all ${
                     selectedProject?.id === project.id
-                      ? "border-purple-500 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 shadow-lg"
-                      : "border-gray-200 dark:border-purple-500/30 hover:border-purple-300 dark:hover:border-purple-500/50 hover:bg-gray-50 dark:hover:bg-purple-500/10"
+                      ? "border-purple-500 bg-gradient-to-r from-purple-50/90 via-indigo-50/80 to-slate-50/90 dark:from-purple-900/30 dark:via-indigo-900/20 dark:to-slate-800/30 shadow-lg ring-2 ring-purple-200 dark:ring-purple-400/30"
+                      : "border-slate-200/60 dark:border-purple-500/30 hover:border-purple-300 dark:hover:border-purple-500/50 hover:bg-slate-50/80 dark:hover:bg-purple-500/10 hover:shadow-md"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -634,14 +640,14 @@ const ProjectDocCreator = () => {
                       style={{ backgroundColor: project.color || '#00D4FF' }}
                     />
                     <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-gray-900 dark:text-gray-100 text-sm truncate">
+                      <p className="font-semibold text-slate-900 dark:text-slate-100 text-sm truncate">
                         {project.name}
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                      <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
                         {project.description}
                       </p>
                     </div>
-                    <ChevronRight className="w-4 h-4 text-gray-400" />
+                    <ChevronRight className="w-4 h-4 text-slate-400" />
                   </div>
                 </motion.button>
               ))}
