@@ -309,7 +309,7 @@ function Projects() {
             
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white rounded-xl transition-all duration-200 shadow-sm text-sm font-medium"
+              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-slate-600 via-purple-600 to-indigo-700 hover:from-slate-700 hover:via-purple-700 hover:to-indigo-800 text-white rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl text-sm font-semibold ring-2 ring-white/20 hover:ring-white/30"
             >
               <PlusCircle className="w-4 h-4" />
               New Project
@@ -376,7 +376,7 @@ function Projects() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="liquid-glass-card hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-600/30 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 ring-1 ring-white/20 dark:ring-slate-700/30"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
