@@ -590,7 +590,7 @@ const ProjectDocCreator = () => {
             <button
               onClick={handleNewDocument}
               disabled={!selectedProject}
-              className="flex items-center gap-2 px-3 py-2 text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 disabled:bg-gray-300 transition-all shadow-lg hover:shadow-xl"
+              className="flex items-center gap-2 px-3 py-2 text-sm bg-gradient-to-r from-slate-600 via-purple-600 to-indigo-700 text-white rounded-lg hover:from-slate-700 hover:via-purple-700 hover:to-indigo-800 disabled:bg-slate-300 disabled:from-slate-300 disabled:to-slate-300 transition-all shadow-lg hover:shadow-xl"
             >
               <Plus className="w-4 h-4" />
               New Document
@@ -598,7 +598,7 @@ const ProjectDocCreator = () => {
             {selectedDoc && (
               <button
                 onClick={() => setShowShareModal(true)}
-                className="flex items-center gap-2 px-3 py-2 text-sm bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
+                className="flex items-center gap-2 px-3 py-2 text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
               >
                 <Share className="w-4 h-4" />
                 Share
@@ -802,9 +802,9 @@ const ProjectDocCreator = () => {
                     <button
                       onClick={() => setPreviewMode(!previewMode)}
                       className={`flex items-center gap-2 px-4 py-2 text-sm border-2 rounded-lg transition-all ${
-                        previewMode 
-                          ? 'border-blue-500 bg-blue-50 text-blue-700' 
-                          : 'border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-blue-300'
+                        previewMode
+                          ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300'
+                          : 'border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:border-purple-300 dark:hover:border-purple-500'
                       }`}
                     >
                       {previewMode ? (
@@ -822,7 +822,7 @@ const ProjectDocCreator = () => {
                     <button
                       onClick={saveDocument}
                       disabled={loading || !content.trim() || !docTitle.trim()}
-                      className="flex items-center gap-2 px-4 py-2 text-sm bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 disabled:bg-gray-300 disabled:from-gray-300 disabled:to-gray-300 transition-all shadow-lg hover:shadow-xl"
+                      className="flex items-center gap-2 px-4 py-2 text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg hover:from-emerald-700 hover:to-teal-700 disabled:bg-slate-300 disabled:from-slate-300 disabled:to-slate-300 transition-all shadow-lg hover:shadow-xl"
                     >
                       <Save className="w-4 h-4" />
                       {loading ? "Saving..." : "Save"}
@@ -831,7 +831,7 @@ const ProjectDocCreator = () => {
                 </div>
 
                 <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-4 text-slate-500 dark:text-slate-400">
                     <div className="flex items-center gap-2">
                       <Lock className="w-4 h-4" />
                       <span>Secure document</span>
@@ -843,7 +843,7 @@ const ProjectDocCreator = () => {
                       </div>
                     )}
                   </div>
-                  <div className="flex items-center gap-2 text-gray-500">
+                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
                     <Clock className="w-4 h-4" />
                     <span>Auto-saved</span>
                   </div>
