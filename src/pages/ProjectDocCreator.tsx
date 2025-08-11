@@ -440,6 +440,14 @@ const ProjectDocCreator = () => {
   const fetchDocuments = async (projectId) => {
     try {
       setLoading(true);
+
+      // Check Firebase connection
+      if (!db) {
+        console.warn("Firebase not available - cannot fetch documents");
+        setDocuments([]);
+        return;
+      }
+
       const snapshot = await getDocs(collection(db, "projectDocs"));
       const filtered = snapshot.docs
         .map((doc) => ({ id: doc.id, ...doc.data() }))
@@ -447,6 +455,16 @@ const ProjectDocCreator = () => {
       setDocuments(filtered);
     } catch (error) {
       console.error("Error fetching documents:", error);
+
+      // Handle network errors gracefully
+      if (error.message?.includes('Failed to fetch') || error.code === 'unavailable') {
+        toast.error("Cannot load documents - check your connection", {
+          duration: 3000,
+          icon: "📄",
+        });
+      }
+
+      setDocuments([]);
     } finally {
       setLoading(false);
     }
