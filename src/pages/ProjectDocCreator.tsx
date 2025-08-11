@@ -367,8 +367,19 @@ const ProjectDocCreator = () => {
   ];
 
   useEffect(() => {
+    if (!auth) {
+      console.warn("Firebase Auth not available");
+      setUserEmail("demo@example.com"); // Fallback email
+      return;
+    }
+
     const unsub = auth.onAuthStateChanged((user) => {
-      if (user?.email) setUserEmail(user.email);
+      if (user?.email) {
+        setUserEmail(user.email);
+      } else {
+        // Fallback for demo mode
+        setUserEmail("demo@example.com");
+      }
     });
     return () => unsub();
   }, []);
