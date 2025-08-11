@@ -96,6 +96,26 @@ import {
 import toast from "react-hot-toast";
 
 const ProjectDocCreator = () => {
+  // Suppress ReactQuill findDOMNode deprecation warning for this component
+  useEffect(() => {
+    const originalConsoleWarn = console.warn;
+    console.warn = (...args) => {
+      // Only suppress the specific ReactQuill findDOMNode warning
+      if (
+        typeof args[0] === 'string' &&
+        args[0].includes('findDOMNode is deprecated') &&
+        args[0].includes('ReactQuill')
+      ) {
+        return; // Suppress ReactQuill findDOMNode warning
+      }
+      originalConsoleWarn.apply(console, args);
+    };
+
+    return () => {
+      console.warn = originalConsoleWarn;
+    };
+  }, []);
+
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [documents, setDocuments] = useState([]);
