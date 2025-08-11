@@ -660,11 +660,11 @@ const ProjectDocCreator = () => {
               {activeTab === "documents" ? (
                 <>
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
-                      <FileText className="w-5 h-5" />
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-purple-500" />
                       Documents
                     </h3>
-                    <span className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full font-medium">
+                    <span className="px-3 py-1.5 text-xs bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900/40 dark:to-indigo-900/40 text-purple-700 dark:text-purple-300 rounded-full font-medium border border-purple-200/50 dark:border-purple-500/30">
                       {filteredDocuments.length}
                     </span>
                   </div>
@@ -679,15 +679,15 @@ const ProjectDocCreator = () => {
                       <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <FileText className="w-8 h-8 text-gray-400" />
                       </div>
-                      <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                      <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
                         No documents yet
                       </h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                      <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
                         Create your first document or use a template
                       </p>
                       <button
                         onClick={() => setActiveTab("templates")}
-                        className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                        className="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 text-sm font-medium transition-colors"
                       >
                         Browse Templates →
                       </button>
@@ -701,23 +701,23 @@ const ProjectDocCreator = () => {
                           onClick={() => handleDocumentSelect(doc)}
                           className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
                             selectedDoc?.id === doc.id
-                              ? "border-purple-500 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 shadow-lg"
-                              : "border-gray-200 dark:border-purple-500/30 hover:border-purple-300 dark:hover:border-purple-500/50 hover:bg-gray-50 dark:hover:bg-purple-500/10"
+                              ? "border-purple-500 bg-gradient-to-r from-purple-50/90 via-indigo-50/80 to-slate-50/90 dark:from-purple-900/30 dark:via-indigo-900/20 dark:to-slate-800/30 shadow-lg ring-2 ring-purple-200 dark:ring-purple-400/30"
+                              : "border-slate-200/60 dark:border-purple-500/30 hover:border-purple-300 dark:hover:border-purple-500/50 hover:bg-slate-50/80 dark:hover:bg-purple-500/10 hover:shadow-md"
                           }`}
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 bg-gradient-to-br from-slate-500 via-purple-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                               <FileText className="w-5 h-5 text-white" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm truncate">
+                              <h4 className="font-semibold text-slate-900 dark:text-slate-100 text-sm truncate">
                                 {doc.title || "Untitled Document"}
                               </h4>
-                              <div className="flex items-center gap-2 mt-1 text-xs text-gray-500 dark:text-gray-400">
+                              <div className="flex items-center gap-2 mt-1 text-xs text-slate-500 dark:text-slate-400">
                                 <User className="w-3 h-3" />
                                 {doc.createdBy}
                               </div>
-                              <div className="flex items-center gap-2 mt-1 text-xs text-gray-500 dark:text-gray-400">
+                              <div className="flex items-center gap-2 mt-1 text-xs text-slate-500 dark:text-slate-400">
                                 <Calendar className="w-3 h-3" />
                                 {new Date(doc.updatedAt).toLocaleDateString()}
                               </div>
