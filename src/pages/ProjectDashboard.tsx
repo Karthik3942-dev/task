@@ -439,22 +439,22 @@ export default function ProjectDashboard() {
                   whileHover={{ y: -8, scale: 1.02 }}
                   onHoverStart={() => setHoveredCard(project.id)}
                   onHoverEnd={() => setHoveredCard(null)}
-                  className="group relative liquid-glass-card overflow-hidden hover:shadow-2xl transition-all duration-300"
+                  className="group relative enhanced-glass-card overflow-hidden hover:shadow-2xl transition-all duration-300"
                 >
                   {/* Card Header */}
                   <div className="p-6 pb-4">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-stone-100 to-stone-200 dark:from-gray-700 dark:to-gray-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                          <Building2 className="w-6 h-6 text-stone-600 dark:text-gray-300" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/50 dark:via-purple-800/40 dark:to-indigo-800/50 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                          <Building2 className="w-6 h-6 text-slate-600 dark:text-purple-300" />
                         </div>
                         <div>
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs font-bold bg-stone-100/80 dark:bg-gray-700/80 text-stone-600 dark:text-gray-300 px-3 py-1 rounded-full border border-stone-200/50 dark:border-gray-600/50 backdrop-blur-sm">
+                            <span className="text-xs font-bold bg-slate-100/80 dark:bg-slate-700/80 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-full border border-slate-200/50 dark:border-purple-500/30 backdrop-blur-sm">
                               #{index + 1}
                             </span>
                             <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                              daysRemaining > 30 ? 'bg-stone-100/80 text-stone-600 dark:bg-gray-700/80 dark:text-gray-300 backdrop-blur-sm' :
+                              daysRemaining > 30 ? 'bg-slate-100/80 text-slate-600 dark:bg-slate-700/80 dark:text-slate-300 backdrop-blur-sm' :
                               daysRemaining > 7 ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
                               'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
                             }`}>
@@ -464,11 +464,11 @@ export default function ProjectDashboard() {
                         </div>
                       </div>
                       <div className="flex gap-1">
-                        <button className="p-2 bg-stone-50/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-lg hover:bg-stone-100/80 dark:hover:bg-gray-600/80 transition-colors group-hover:scale-110">
-                          <Eye className="w-4 h-4 text-stone-600 dark:text-gray-400" />
+                        <button className="p-2 bg-slate-50/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-lg hover:bg-slate-100/80 dark:hover:bg-purple-600/80 transition-colors group-hover:scale-110">
+                          <Eye className="w-4 h-4 text-slate-600 dark:text-slate-300" />
                         </button>
-                        <button className="p-2 bg-stone-50/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-lg hover:bg-stone-100/80 dark:hover:bg-gray-600/80 transition-colors group-hover:scale-110">
-                          <MoreHorizontal className="w-4 h-4 text-stone-600 dark:text-gray-400" />
+                        <button className="p-2 bg-slate-50/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-lg hover:bg-slate-100/80 dark:hover:bg-purple-600/80 transition-colors group-hover:scale-110">
+                          <MoreHorizontal className="w-4 h-4 text-slate-600 dark:text-slate-300" />
                         </button>
                       </div>
                     </div>
