@@ -436,64 +436,87 @@ export default function ProjectDashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ delay: index * 0.1, duration: 0.3 }}
-                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileHover={{ y: -12, scale: 1.03 }}
                   onHoverStart={() => setHoveredCard(project.id)}
                   onHoverEnd={() => setHoveredCard(null)}
-                  className="group relative enhanced-glass-card overflow-hidden hover:shadow-2xl transition-all duration-300"
+                  className="group relative enhanced-glass-card overflow-hidden hover:shadow-2xl transition-all duration-500"
                 >
                   {/* Card Header */}
-                  <div className="p-6 pb-4">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/50 dark:via-purple-800/40 dark:to-indigo-800/50 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                          <Building2 className="w-6 h-6 text-slate-600 dark:text-purple-300" />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs font-bold bg-slate-100/80 dark:bg-slate-700/80 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-full border border-slate-200/50 dark:border-purple-500/30 backdrop-blur-sm">
-                              #{index + 1}
-                            </span>
-                            <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                              daysRemaining > 30 ? 'bg-slate-100/80 text-slate-600 dark:bg-slate-700/80 dark:text-slate-300 backdrop-blur-sm' :
-                              daysRemaining > 7 ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
-                              'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-                            }`}>
-                              {daysRemaining > 0 ? `${daysRemaining} days left` : 'Overdue'}
-                            </span>
+                  <div className="relative p-8 pb-6">
+                    {/* Background Pattern */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-200/20 via-indigo-200/15 to-slate-200/10 dark:from-purple-800/10 dark:via-indigo-800/8 dark:to-slate-700/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between mb-6">
+                        <div className="flex items-center gap-4">
+                          <div className="relative">
+                            <div className="w-16 h-16 bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-700/60 dark:via-purple-800/50 dark:to-indigo-800/60 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-500">
+                              <Building2 className="w-8 h-8 text-slate-600 dark:text-purple-300 group-hover:text-purple-600 dark:group-hover:text-purple-200 transition-colors duration-300" />
+                            </div>
+                            <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full border-3 border-white dark:border-slate-800 shadow-lg ${
+                              progress >= 100 ? 'bg-green-500' :
+                              progress >= 50 ? 'bg-yellow-500' : 'bg-red-500'
+                            }`}></div>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <span className="text-xs font-bold bg-gradient-to-r from-slate-100 to-purple-100 dark:from-slate-700/80 dark:to-purple-800/60 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-full border border-slate-200/60 dark:border-purple-500/30 backdrop-blur-sm shadow-sm">
+                                Project #{index + 1}
+                              </span>
+                              <span className={`text-xs px-3 py-2 rounded-full font-semibold shadow-sm ${
+                                daysRemaining > 30 ? 'bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 dark:from-green-900/30 dark:to-emerald-900/30 dark:text-green-400 border border-green-200 dark:border-green-700/30' :
+                                daysRemaining > 7 ? 'bg-gradient-to-r from-yellow-100 to-orange-100 text-yellow-700 dark:from-yellow-900/30 dark:to-orange-900/30 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-700/30' :
+                                'bg-gradient-to-r from-red-100 to-pink-100 text-red-700 dark:from-red-900/30 dark:to-pink-900/30 dark:text-red-400 border border-red-200 dark:border-red-700/30'
+                              }`}>
+                                {daysRemaining > 0 ? `${daysRemaining} days left` : 'Overdue'}
+                              </span>
+                            </div>
                           </div>
                         </div>
+                        <div className="flex gap-2">
+                          <button className="group/btn p-3 bg-gradient-to-br from-slate-50/90 to-purple-50/80 dark:from-slate-700/90 dark:to-purple-800/60 backdrop-blur-sm rounded-xl hover:from-purple-100/90 hover:to-indigo-100/80 dark:hover:from-purple-700/80 dark:hover:to-indigo-700/60 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110">
+                            <Eye className="w-5 h-5 text-slate-600 dark:text-slate-300 group-hover/btn:text-purple-600 dark:group-hover/btn:text-purple-300 transition-colors" />
+                          </button>
+                          <button className="group/btn p-3 bg-gradient-to-br from-slate-50/90 to-purple-50/80 dark:from-slate-700/90 dark:to-purple-800/60 backdrop-blur-sm rounded-xl hover:from-purple-100/90 hover:to-indigo-100/80 dark:hover:from-purple-700/80 dark:hover:to-indigo-700/60 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110">
+                            <MoreHorizontal className="w-5 h-5 text-slate-600 dark:text-slate-300 group-hover/btn:text-purple-600 dark:group-hover/btn:text-purple-300 transition-colors" />
+                          </button>
+                        </div>
                       </div>
-                      <div className="flex gap-1">
-                        <button className="p-2 bg-slate-50/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-lg hover:bg-slate-100/80 dark:hover:bg-purple-600/80 transition-colors group-hover:scale-110">
-                          <Eye className="w-4 h-4 text-slate-600 dark:text-slate-300" />
-                        </button>
-                        <button className="p-2 bg-slate-50/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-lg hover:bg-slate-100/80 dark:hover:bg-purple-600/80 transition-colors group-hover:scale-110">
-                          <MoreHorizontal className="w-4 h-4 text-slate-600 dark:text-slate-300" />
-                        </button>
-                      </div>
+
+                      <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors duration-300">
+                        {project.name}
+                      </h2>
+
+                      <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-6 line-clamp-3">
+                        {project.description}
+                      </p>
                     </div>
 
-                    <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">
-                      {project.name}
-                    </h2>
 
-                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">
-                      {project.description}
-                    </p>
-
-                    {/* Progress Bar */}
-                    <div className="mb-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Progress</span>
-                        <span className="text-xs font-bold text-slate-900 dark:text-slate-100">{progress}%</span>
+                    {/* Enhanced Progress Section */}
+                    <div className="relative mb-6">
+                      <div className="flex justify-between items-center mb-3">
+                        <div className="flex items-center gap-2">
+                          <Activity className="w-4 h-4 text-purple-500" />
+                          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Project Progress</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg font-bold text-slate-900 dark:text-slate-100">{progress}%</span>
+                          <div className={`w-3 h-3 rounded-full ${
+                            progress >= 100 ? 'bg-green-500 animate-pulse' :
+                            progress >= 50 ? 'bg-yellow-500' : 'bg-red-500'
+                          }`}></div>
+                        </div>
                       </div>
-                      <div className="w-full bg-slate-200/80 dark:bg-slate-700/80 backdrop-blur-sm rounded-full h-2 overflow-hidden">
+                      <div className="relative w-full h-3 bg-gradient-to-r from-slate-200/80 via-purple-200/60 to-indigo-200/80 dark:from-slate-700/80 dark:via-purple-800/60 dark:to-indigo-800/80 backdrop-blur-sm rounded-full overflow-hidden shadow-inner">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${progress}%` }}
-                          transition={{ duration: 1, delay: index * 0.1 }}
-                          className="h-full bg-gradient-to-r from-slate-500 via-purple-500 to-indigo-600 rounded-full shadow-sm"
-                        />
+                          transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
+                          className="h-full bg-gradient-to-r from-slate-500 via-purple-500 to-indigo-600 rounded-full shadow-lg relative overflow-hidden"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                        </motion.div>
                       </div>
                     </div>
                   </div>
