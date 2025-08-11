@@ -854,25 +854,25 @@ const ProjectDocCreator = () => {
               <div className="flex-1 overflow-hidden">
                 {previewMode ? (
                   <div
-                    className="h-full overflow-y-auto p-8 bg-white dark:bg-gray-800 relative"
+                    className="h-full overflow-y-auto p-8 bg-white dark:bg-slate-800 relative"
                     onContextMenu={(e) => e.preventDefault()}
                     onCopy={(e) => e.preventDefault()}
                     style={{ userSelect: "none" }}
                   >
                     {/* Enhanced Watermark */}
                     <div
-                      className="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center text-6xl font-bold text-gray-500 transform rotate-45"
+                      className="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center text-6xl font-bold text-slate-500 dark:text-slate-400 transform rotate-45"
                       style={{ zIndex: 1 }}
                     >
                       CONFIDENTIAL - {userEmail}
                     </div>
                     
                     {/* Enhanced Document Header */}
-                    <div className="mb-8 pb-6 border-b-2 border-gray-200 dark:border-gray-700 relative z-10">
-                      <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                    <div className="mb-8 pb-6 border-b-2 border-slate-200 dark:border-slate-600 relative z-10">
+                      <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
                         {docTitle || "Untitled Document"}
                       </h1>
-                      <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
                         <div className="flex items-center gap-2">
                           <Briefcase className="w-4 h-4" />
                           <span>Project: {selectedProject.name}</span>
@@ -901,7 +901,7 @@ const ProjectDocCreator = () => {
                     />
                   </div>
                 ) : (
-                  <div className="h-full p-6 bg-white dark:bg-gray-800">
+                  <div className="h-full p-6 bg-white dark:bg-slate-800">
                     <QuillEditor
                       value={content}
                       onChange={setContent}
@@ -943,18 +943,18 @@ const ProjectDocCreator = () => {
               </div>
             </>
           ) : (
-            <div className="flex-1 flex items-center justify-center bg-white dark:bg-gray-800">
+            <div className="flex-1 flex items-center justify-center bg-white dark:bg-slate-800">
               <div className="text-center max-w-md">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-gradient-to-br from-slate-500 via-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3">
                   Welcome to Creative Doc Studio
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                <p className="text-slate-600 dark:text-slate-400 mb-6">
                   Choose a project from the sidebar to start creating amazing documents with our templates and tools
                 </p>
-                <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
+                <div className="flex items-center justify-center gap-4 text-sm text-slate-500 dark:text-slate-400">
                   <div className="flex items-center gap-2">
                     <Layout className="w-4 h-4" />
                     <span>Professional Templates</span>
@@ -982,23 +982,23 @@ const ProjectDocCreator = () => {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="w-full max-w-md liquid-glass-card shadow-2xl overflow-hidden"
+              className="w-full max-w-md enhanced-glass-card shadow-2xl overflow-hidden"
             >
-              <div className="p-6 border-b border-gray-200 dark:border-purple-500/30">
+              <div className="p-6 border-b border-slate-200/50 dark:border-purple-500/30">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
                       <Share className="w-5 h-5 text-white" />
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
                       Share Document
                     </h2>
                   </div>
                   <button
                     onClick={() => setShowShareModal(false)}
-                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+                    className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5 text-slate-500 dark:text-slate-400" />
                   </button>
                 </div>
               </div>
