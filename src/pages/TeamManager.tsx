@@ -338,7 +338,7 @@ export default function TeamManager() {
       >
         {/* Team Header */}
         <div
-          className="p-6 text-white relative overflow-hidden bg-gradient-to-br from-cyan-500 to-orange-500 dark:from-purple-700 dark:to-purple-900"
+          className="p-6 text-white relative overflow-hidden bg-gradient-to-br from-purple-500 to-blue-600 dark:from-purple-700 dark:to-blue-900"
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
           <div className="relative">
@@ -475,13 +475,13 @@ export default function TeamManager() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-orange-50 dark:bg-gradient-to-br dark:from-purple-900/20 dark:via-purple-800/30 dark:to-purple-900/20">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20">
       {/* Enhanced Header */}
       <div className="bg-white/80 dark:bg-black/95 backdrop-blur-xl border-b border-cyan-300/50 dark:border-purple-500/40 sticky top-0 z-10">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-orange-500 dark:from-purple-600 dark:to-purple-800 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 dark:from-purple-600 dark:to-blue-800 rounded-2xl flex items-center justify-center shadow-lg">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -560,7 +560,7 @@ export default function TeamManager() {
       <div className="p-6">
         {teams.length === 0 ? (
           <div className="text-center py-16">
-            <div className="w-24 h-24 bg-gradient-to-br from-cyan-100 to-orange-100 dark:from-purple-800/50 dark:to-purple-700/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-800/50 dark:to-blue-700/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Users className="w-12 h-12 text-gray-400" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
