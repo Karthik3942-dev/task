@@ -11,6 +11,21 @@ import "react-quill/dist/quill.snow.css";
 // Import ReactQuill directly since warning is handled globally
 import ReactQuill from "react-quill";
 
+// Suppress ReactQuill findDOMNode deprecation warning
+React.useEffect(() => {
+  const originalConsoleWarn = console.warn;
+  console.warn = (...args) => {
+    if (args[0]?.includes?.('findDOMNode is deprecated')) {
+      return; // Suppress ReactQuill findDOMNode warning
+    }
+    originalConsoleWarn.apply(console, args);
+  };
+
+  return () => {
+    console.warn = originalConsoleWarn;
+  };
+}, []);
+
 // Simplified wrapper component for ReactQuill with SSR protection
 const QuillEditor = React.forwardRef<ReactQuill, any>((props, ref) => {
   const [mounted, setMounted] = useState(false);
