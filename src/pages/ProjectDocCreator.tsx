@@ -1005,7 +1005,7 @@ const ProjectDocCreator = () => {
               
               <div className="p-6 space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Document Access
                   </label>
                   <div className="space-y-2">
@@ -1015,11 +1015,11 @@ const ProjectDocCreator = () => {
                         name="access"
                         checked={!shareSettings.public}
                         onChange={() => setShareSettings(prev => ({ ...prev, public: false }))}
-                        className="text-blue-600"
+                        className="text-purple-600"
                       />
                       <div>
                         <p className="font-medium">Private</p>
-                        <p className="text-xs text-gray-500">Only people with the link can view</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Only people with the link can view</p>
                       </div>
                     </label>
                     <label className="flex items-center gap-3">
@@ -1028,18 +1028,18 @@ const ProjectDocCreator = () => {
                         name="access"
                         checked={shareSettings.public}
                         onChange={() => setShareSettings(prev => ({ ...prev, public: true }))}
-                        className="text-blue-600"
+                        className="text-purple-600"
                       />
                       <div>
                         <p className="font-medium">Public</p>
-                        <p className="text-xs text-gray-500">Anyone on the internet can view</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Anyone on the internet can view</p>
                       </div>
                     </label>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Permissions
                   </label>
                   <div className="space-y-2">
@@ -1048,7 +1048,7 @@ const ProjectDocCreator = () => {
                         type="checkbox"
                         checked={shareSettings.allowComments}
                         onChange={(e) => setShareSettings(prev => ({ ...prev, allowComments: e.target.checked }))}
-                        className="text-blue-600"
+                        className="text-purple-600"
                       />
                       <span className="text-sm">Allow comments</span>
                     </label>
@@ -1057,7 +1057,7 @@ const ProjectDocCreator = () => {
                         type="checkbox"
                         checked={shareSettings.allowDownload}
                         onChange={(e) => setShareSettings(prev => ({ ...prev, allowDownload: e.target.checked }))}
-                        className="text-blue-600"
+                        className="text-purple-600"
                       />
                       <span className="text-sm">Allow download</span>
                     </label>
@@ -1067,13 +1067,13 @@ const ProjectDocCreator = () => {
                 <div className="flex gap-3 pt-4">
                   <button
                     onClick={() => setShowShareModal(false)}
-                    className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                    className="flex-1 px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={handleShare}
-                    className="flex-1 px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
+                    className="flex-1 px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
                   >
                     Copy Link
                   </button>
