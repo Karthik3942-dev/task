@@ -245,20 +245,20 @@ export default function ProjectDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-100/95 to-orange-100/95 dark:bg-gradient-to-br dark:from-black/95 dark:to-black/90">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20">
       {/* Enhanced Header */}
-      <div className="bg-white/80 dark:bg-black/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-purple-500/30 shadow-sm">
+      <div className="liquid-glass border-b border-gray-200 dark:border-purple-500/30 shadow-sm">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
               <Briefcase className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent tracking-tight">
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent tracking-tight">
                   Project Dashboard
                 </h1>
-                <p className="text-stone-600 dark:text-gray-400 font-medium">
+                <p className="text-purple-600/70 dark:text-purple-300/70 font-medium">
                   Manage and track all your projects
                 </p>
               </div>
@@ -288,7 +288,7 @@ export default function ProjectDashboard() {
 
               <button
                 onClick={() => setShowNewProjectModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <Plus className="w-4 h-4" />
                 <span className="hidden sm:inline font-medium">New Project</span>
