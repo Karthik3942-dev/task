@@ -521,30 +521,40 @@ export default function ProjectDashboard() {
                     </div>
                   </div>
 
-                  {/* Project Details */}
-                  <div className="px-6 pb-4">
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="flex items-center gap-2 text-sm">
-                        <Calendar className="w-4 h-4 text-stone-400" />
-                        <div>
-                          <p className="text-stone-500 dark:text-gray-400 text-xs">Start Date</p>
-                          <p className="font-medium text-gray-900 dark:text-gray-100">{project.startDate}</p>
+                  {/* Enhanced Project Details */}
+                  <div className="px-8 pb-6">
+                    <div className="bg-gradient-to-br from-slate-50/80 via-purple-50/40 to-indigo-50/60 dark:from-slate-800/40 dark:via-purple-900/20 dark:to-indigo-900/30 rounded-2xl p-6 border border-slate-200/50 dark:border-purple-500/20 backdrop-blur-sm">
+                      <div className="grid grid-cols-2 gap-6 mb-6">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-5 h-5 text-purple-500" />
+                            <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Start Date</span>
+                          </div>
+                          <p className="text-lg font-bold text-slate-900 dark:text-slate-100 ml-7">{project.startDate}</p>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-5 h-5 text-indigo-500" />
+                            <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Deadline</span>
+                          </div>
+                          <p className="text-lg font-bold text-slate-900 dark:text-slate-100 ml-7">{project.deadline}</p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <Clock className="w-4 h-4 text-stone-400" />
-                        <div>
-                          <p className="text-stone-500 dark:text-gray-400 text-xs">Deadline</p>
-                          <p className="font-medium text-gray-900 dark:text-gray-100">{project.deadline}</p>
-                        </div>
-                      </div>
-                    </div>
 
-                    <div className="flex items-center gap-2 text-sm mb-4">
-                      <User className="w-4 h-4 text-gray-400" />
-                      <div>
-                        <p className="text-gray-500 dark:text-gray-400 text-xs">Created By</p>
-                        <p className="font-medium text-gray-900 dark:text-gray-100">{getEmployeeName(project.created_by)}</p>
+                      <div className="flex items-center justify-between pt-4 border-t border-slate-200/50 dark:border-purple-500/20">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-800/60 dark:to-indigo-800/60 rounded-full flex items-center justify-center">
+                            <User className="w-4 h-4 text-purple-600 dark:text-purple-300" />
+                          </div>
+                          <div>
+                            <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Project Lead</p>
+                            <p className="text-sm font-bold text-slate-900 dark:text-slate-100">{getEmployeeName(project.created_by)}</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Team</p>
+                          <p className="text-sm font-bold text-slate-900 dark:text-slate-100">{getTeamName(project.teamId)}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -614,9 +624,14 @@ export default function ProjectDashboard() {
                     </AnimatePresence>
                   </div>
 
-                  {/* Hover Effect Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-100/20 dark:to-gray-700/20 rounded-2xl transition-opacity duration-300 pointer-events-none ${
-                    hoveredCard === project.id ? 'opacity-100' : 'opacity-0'
+                  {/* Enhanced Hover Effect Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br from-purple-100/10 via-indigo-100/15 to-slate-100/20 dark:from-purple-900/5 dark:via-indigo-900/8 dark:to-slate-800/10 rounded-2xl transition-all duration-500 pointer-events-none border border-purple-300/20 dark:border-purple-500/20 ${
+                    hoveredCard === project.id ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+                  }`} />
+
+                  {/* Animated border glow on hover */}
+                  <div className={`absolute inset-0 rounded-2xl transition-all duration-500 pointer-events-none ${
+                    hoveredCard === project.id ? 'shadow-lg shadow-purple-500/20 dark:shadow-purple-400/10' : ''
                   }`} />
                 </motion.div>
               );
