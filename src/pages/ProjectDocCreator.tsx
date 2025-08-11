@@ -5,6 +5,7 @@ import "react-quill/dist/quill.snow.css";
  * Note: ReactQuill internally uses findDOMNode which is deprecated in React 18.
  * This warning is a known issue with the react-quill library and cannot be completely
  * eliminated without updating the library itself. The warning does not affect functionality.
+ * We suppress this specific warning below since it's from a third-party library.
  * See: https://github.com/zenoamaro/react-quill/issues/775
  */
 
