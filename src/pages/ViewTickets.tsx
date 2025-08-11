@@ -202,10 +202,11 @@ const AdminTicketsPage = () => {
   };
 
   return (
-    <div className="h-full bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20 p-6">
+    <div className="h-full bg-gradient-to-br from-slate-100 via-purple-100 to-indigo-200 dark:from-slate-800 dark:via-purple-900/40 dark:to-indigo-900/60 p-6 relative overflow-hidden">
       <h1 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">All Tickets</h1>
 
-      <div className="flex gap-4 mb-4 flex-wrap">
+        {/* Filters */}
+        <div className="flex gap-4 flex-wrap">
         <select
           className="border border-purple-300 dark:border-purple-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
           value={projectFilter}
@@ -251,7 +252,8 @@ const AdminTicketsPage = () => {
         </select>
       </div>
 
-      <div className="liquid-glass-card overflow-auto">
+      {/* Content */}
+      <div className="relative z-10 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-600/30 rounded-2xl shadow-xl ring-1 ring-white/20 dark:ring-slate-700/30 overflow-auto">
         <table className="min-w-[1200px] w-full border-collapse text-sm text-left">
           <thead className="bg-white/50 dark:bg-black/50">
             <tr>
