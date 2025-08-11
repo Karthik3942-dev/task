@@ -20,6 +20,7 @@ import {
   ArrowRight,
   ChevronRight,
   Flag,
+  Briefcase,
 } from "lucide-react";
 
 export default function ProjectTasksViewer() {
