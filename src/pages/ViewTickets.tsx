@@ -207,7 +207,7 @@ const AdminTicketsPage = () => {
 
       <div className="flex gap-4 mb-4 flex-wrap">
         <select
-          className="border border-cyan-300 dark:border-orange-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
+          className="border border-purple-300 dark:border-purple-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
           value={projectFilter}
           onChange={(e) => setProjectFilter(e.target.value)}
         >
@@ -218,7 +218,7 @@ const AdminTicketsPage = () => {
         </select>
 
         <select
-          className="border border-cyan-300 dark:border-orange-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
+          className="border border-purple-300 dark:border-purple-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
         >
@@ -229,7 +229,7 @@ const AdminTicketsPage = () => {
         </select>
 
         <select
-          className="border border-cyan-300 dark:border-orange-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
+          className="border border-purple-300 dark:border-purple-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
           value={userFilter}
           onChange={(e) => setUserFilter(e.target.value)}
         >
@@ -240,7 +240,7 @@ const AdminTicketsPage = () => {
         </select>
 
         <select
-          className="border border-cyan-300 dark:border-orange-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
+          className="border border-purple-300 dark:border-purple-500/40 p-2 rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white"
           value={dateFilter}
           onChange={(e) => setDateFilter(e.target.value)}
         >
@@ -256,27 +256,27 @@ const AdminTicketsPage = () => {
           <thead className="bg-white/50 dark:bg-black/50">
             <tr>
               <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Ticket ID</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Title</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Description</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Priority</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Status</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Due Date</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Project</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Created By</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Created At</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Team Lead</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Review</th>
-              <th className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">Actions</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Title</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Description</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Priority</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Status</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Due Date</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Project</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Created By</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Created At</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Team Lead</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Review</th>
+              <th className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">Actions</th>
             </tr>
           </thead>
           <tbody>
             {filteredTickets.map((ticket) => (
               <tr key={ticket.id} className="hover:bg-purple-50 dark:hover:bg-purple-900/20">
                 <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">{ticket.projectTicketId}</td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.title}</td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.description}</td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.priority}</td>
-                <td className="px-4 py-2 border border-cyan-300 dark:border-orange-500/40">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">{ticket.title}</td>
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">{ticket.description}</td>
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">{ticket.priority}</td>
+                <td className="px-4 py-2 border border-purple-300 dark:border-purple-500/40">
                   <span
                     className={`px-2 py-1 rounded-full text-white text-xs font-medium ${
                       ticket.status === "Done"
@@ -292,7 +292,7 @@ const AdminTicketsPage = () => {
                   </span>
                 </td>
                 <td
-                  className={`p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white ${
+                  className={`p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white ${
                     isPastDue(ticket.dueDate)
                       ? "text-red-600 dark:text-red-400 font-semibold"
                       : ""
@@ -300,11 +300,11 @@ const AdminTicketsPage = () => {
                 >
                   {ticket.dueDate || "N/A"}
                 </td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">
                   {projectsMap[ticket.projectId] || ticket.projectId}
                 </td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">{ticket.createdByName}</td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">{ticket.createdByName}</td>
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">
                   {ticket.createdAt?.seconds
                     ? format(
                         new Date(ticket.createdAt.seconds * 1000),
@@ -312,12 +312,12 @@ const AdminTicketsPage = () => {
                       )
                     : "N/A"}
                 </td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 text-gray-900 dark:text-white">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 text-gray-900 dark:text-white">
                   {teamLeadMap[ticket.teamLeadId] || ticket.teamLeadId}
                 </td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40">
                   <select
-                    className={`border border-cyan-300 dark:border-orange-500/40 px-2 py-1 w-full rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white ${getReviewColor(
+                    className={`border border-purple-300 dark:border-purple-500/40 px-2 py-1 w-full rounded bg-white dark:bg-black/95 text-gray-900 dark:text-white ${getReviewColor(
                       ticket.review
                     )}`}
                     value={ticket.review || ""}
@@ -331,7 +331,7 @@ const AdminTicketsPage = () => {
                     <option value="Done">Done</option>
                   </select>
                 </td>
-                <td className="p-2 border border-cyan-300 dark:border-orange-500/40 space-x-2">
+                <td className="p-2 border border-purple-300 dark:border-purple-500/40 space-x-2">
                   <button
                     className="text-purple-600 dark:text-purple-400 underline"
                     onClick={() => handleEditClick(ticket)}
