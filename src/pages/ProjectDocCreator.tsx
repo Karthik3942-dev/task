@@ -390,6 +390,12 @@ const ProjectDocCreator = () => {
 
   const fetchProjects = async () => {
     try {
+      // Check Firebase connection first
+      if (!db) {
+        console.warn("Firebase not initialized - using fallback data");
+        throw new Error("Firebase not available");
+      }
+
       const snapshot = await getDocs(collection(db, "projects"));
       const projectList = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -398,6 +404,15 @@ const ProjectDocCreator = () => {
       setProjects(projectList);
     } catch (error) {
       console.error("Error fetching projects:", error);
+
+      // Show user-friendly error notification
+      if (error.message?.includes('Failed to fetch') || error.code === 'unavailable') {
+        toast.error("Network connection issue. Using offline data.", {
+          duration: 4000,
+          icon: "🌐",
+        });
+      }
+
       // Mock data fallback
       setProjects([
         {
