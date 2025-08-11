@@ -147,7 +147,7 @@ export default function RaiseProjectTicket() {
   };
 
   return (
-    <div className="h-full bg-gradient-to-br from-cyan-100/95 to-orange-100/95 dark:bg-gradient-to-br dark:from-black/95 dark:to-black/90 p-6">
+    <div className="h-full bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20 p-6">
       <motion.div
         className="max-w-3xl mx-auto liquid-glass-card"
         initial={{ opacity: 0, y: 10 }}
@@ -174,7 +174,7 @@ export default function RaiseProjectTicket() {
 
         {/* Project Details Preview */}
         {projectDetails && (
-          <div className="mb-4 p-4 border border-gray-200 dark:border-purple-500/30 rounded bg-gray-50 dark:bg-black/50">
+          <div className="mb-4 p-4 border border-purple-200 dark:border-purple-500/30 rounded bg-purple-50 dark:bg-black/50">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-purple-100">{projectDetails.name}</h3>
             <p className="text-gray-700 dark:text-purple-300/80">{projectDetails.description}</p>
             {projectDetails.deadline && (
@@ -237,7 +237,7 @@ export default function RaiseProjectTicket() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg transition-all shadow-lg"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg transition-all shadow-lg"
             >
               {loading ? "Submitting..." : "Raise Ticket"}
             </button>
