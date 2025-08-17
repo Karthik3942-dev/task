@@ -124,6 +124,11 @@ export function LoginForm({
                 <div>• <strong>Employee:</strong> View projects, manage assigned tasks</div>
                 <div>• <strong>Admin:</strong> Full system access and user management</div>
               </div>
+              <div className="mt-2 pt-2 border-t border-cyan-200 dark:border-cyan-700">
+                <div className="text-xs text-gray-500 dark:text-gray-400">
+                  Use your work email and password to access the system
+                </div>
+              </div>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
