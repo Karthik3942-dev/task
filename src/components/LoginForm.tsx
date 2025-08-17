@@ -211,12 +211,12 @@ export function LoginForm({
           <div className="absolute bottom-32 -right-14 w-3 h-3 bg-cyan-400/85 dark:bg-cyan-300/95 rounded-full animate-glow-pulse shadow-sm" style={{animationDelay: '4.5s'}}></div>
           
           {/* Floating geometric shapes - enhanced visibility */}
-          <div className="absolute top-24 -right-20 w-5 h-5 bg-gradient-to-br from-violet-400/50 to-purple-500/70 dark:from-violet-500/70 dark:to-purple-400/90 rounded-sm rotate-45 animate-orbit-reverse shadow-md" style={{animationDelay: '2.2s'}}></div>
-          <div className="absolute bottom-24 -right-18 w-8 h-2 bg-gradient-to-r from-purple-400/70 to-indigo-500/80 dark:from-purple-500/80 dark:to-indigo-400/90 animate-ripple shadow-sm" style={{animationDelay: '3.8s'}}></div>
+          <div className="absolute top-24 -right-20 w-5 h-5 bg-gradient-to-br from-cyan-400/50 to-blue-500/70 dark:from-cyan-500/70 dark:to-blue-400/90 rounded-sm rotate-45 animate-orbit-reverse shadow-md" style={{animationDelay: '2.2s'}}></div>
+          <div className="absolute bottom-24 -right-18 w-8 h-2 bg-gradient-to-r from-blue-400/70 to-cyan-500/80 dark:from-blue-500/80 dark:to-cyan-400/90 animate-ripple shadow-sm" style={{animationDelay: '3.8s'}}></div>
           
           {/* Left side decorative elements */}
-          <div className="absolute top-12 -left-6 w-4 h-4 bg-gradient-to-br from-violet-300/60 to-purple-400/70 dark:from-violet-600/80 dark:to-purple-500/90 rounded-full animate-gentle-drift shadow-md" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute bottom-12 -left-8 w-6 h-6 bg-gradient-to-br from-indigo-300/50 to-violet-400/60 dark:from-indigo-600/70 dark:to-violet-500/80 rounded-full animate-parallax-float shadow-lg" style={{animationDelay: '2.8s'}}></div>
+          <div className="absolute top-12 -left-6 w-4 h-4 bg-gradient-to-br from-cyan-300/60 to-blue-400/70 dark:from-cyan-600/80 dark:to-blue-500/90 rounded-full animate-gentle-drift shadow-md" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute bottom-12 -left-8 w-6 h-6 bg-gradient-to-br from-cyan-300/50 to-blue-400/60 dark:from-cyan-600/70 dark:to-blue-500/80 rounded-full animate-parallax-float shadow-lg" style={{animationDelay: '2.8s'}}></div>
         </div>
       </div>
       
