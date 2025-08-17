@@ -70,13 +70,13 @@ export function LoginForm({
   };
 
   return (
-    <div className={cn("w-full max-w-6xl mx-auto", className)} {...props}>
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-[600px]">
+    <div className={cn("w-full max-w-4xl mx-auto", className)} {...props}>
+      <div className="grid lg:grid-cols-2 gap-6 lg:gap-0 items-center min-h-[500px]">
         {/* Left Side - Login Form */}
-        <div className="relative z-20 lg:pr-12">
-          <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-3xl shadow-2xl p-8 lg:p-12 moving-border">
+        <div className="relative z-20 lg:pr-8">
+          <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl shadow-xl p-6 lg:p-8 moving-border">
             {/* Theme Toggle */}
-            <div className="flex justify-end mb-8">
+            <div className="flex justify-end mb-6">
               <button
                 onClick={toggleTheme}
                 className="p-3 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-slate-800 dark:to-cyan-900/50 border border-cyan-200/50 dark:border-cyan-500/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group backdrop-blur-sm"
@@ -91,7 +91,7 @@ export function LoginForm({
             </div>
 
             {/* Logo */}
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
                 <User className="w-6 h-6 text-white" />
               </div>
