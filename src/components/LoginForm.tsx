@@ -184,14 +184,14 @@ export function LoginForm({
               {/* Quote Section */}
               <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg rotating-border">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-sm font-bold">"</span>
                   </div>
                   <div>
                     <p className="text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
                       {currentQuote}
                     </p>
-                    <p className="text-sm text-violet-600 dark:text-violet-400 mt-3 font-semibold">
+                    <p className="text-sm text-cyan-600 dark:text-cyan-400 mt-3 font-semibold">
                       — ENKONIX
                     </p>
                   </div>
