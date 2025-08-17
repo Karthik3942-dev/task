@@ -167,51 +167,29 @@ export function LoginForm({
           </div>
         </div>
 
-        {/* Right Side - Welcome Section */}
-        <div className="relative lg:pl-8">
-          {/* Large Welcome Text */}
-          <div className="relative z-10">
-            
-            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-200 dark:to-gray-400 bg-clip-text text-transparent mb-6 leading-tight mt-8">
-              WELCOME
-            </h1>
-            
-            <div className="space-y-4 max-w-sm">
-              <p className="text-base lg:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Step into your productivity workspace where every task moves you closer to success.
-              </p>
-              
-              {/* Quote Section */}
-              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-xl p-4 shadow-lg rotating-border">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-xs font-bold">"</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
-                      {currentQuote}
-                    </p>
-                    <p className="text-xs text-cyan-600 dark:text-cyan-400 mt-2 font-semibold">
-                      — ENKONIX
-                    </p>
-                  </div>
-                </div>
+        {/* Quote Section - below the form */}
+        <div className="mt-6">
+          <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-xl p-4 shadow-lg rotating-border border border-gray-200/50 dark:border-gray-700/50">
+            <div className="flex items-start gap-3">
+              <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span className="text-white text-xs font-bold">"</span>
+              </div>
+              <div>
+                <p className="text-sm text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
+                  {currentQuote}
+                </p>
+                <p className="text-xs text-cyan-600 dark:text-cyan-400 mt-2 font-semibold">
+                  — ENKONIX
+                </p>
               </div>
             </div>
           </div>
-          
-          {/* Decorative Elements - repositioned to avoid text overlap */}
-          <div className="absolute -top-6 -right-6 w-8 h-8 bg-gradient-to-br from-cyan-300/60 to-blue-400/70 dark:from-cyan-700/70 dark:to-blue-600/80 rounded-full opacity-70 animate-floating-circle shadow-lg"></div>
-          <div className="absolute top-12 -right-8 w-4 h-4 bg-gradient-to-br from-blue-300/70 to-cyan-400/80 dark:from-blue-600/80 dark:to-cyan-500/90 rounded-full opacity-50 animate-orbit shadow-md" style={{animationDelay: '1s'}}></div>
-          
-          {/* Additional animated particles - improved contrast */}
-          <div className="absolute bottom-12 -right-6 w-6 h-6 bg-gradient-to-br from-cyan-300/60 to-blue-400/70 dark:from-cyan-600/70 dark:to-blue-500/80 rounded-full opacity-60 animate-scale-pulse shadow-lg" style={{animationDelay: '2s'}}></div>
-          
-          {/* Floating geometric shapes - enhanced visibility */}
-          
-          {/* Left side decorative elements */}
-          <div className="absolute top-8 -left-4 w-3 h-3 bg-gradient-to-br from-cyan-300/50 to-blue-400/60 dark:from-cyan-600/70 dark:to-blue-500/80 rounded-full animate-gentle-drift shadow-md" style={{animationDelay: '1.5s'}}></div>
         </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute -top-6 -right-6 w-8 h-8 bg-gradient-to-br from-cyan-300/60 to-blue-400/70 dark:from-cyan-700/70 dark:to-blue-600/80 rounded-full opacity-70 animate-floating-circle shadow-lg"></div>
+        <div className="absolute top-12 -right-8 w-4 h-4 bg-gradient-to-br from-blue-300/70 to-cyan-400/80 dark:from-blue-600/80 dark:to-cyan-500/90 rounded-full opacity-50 animate-orbit shadow-md" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-12 -left-4 w-3 h-3 bg-gradient-to-br from-cyan-300/50 to-blue-400/60 dark:from-cyan-600/70 dark:to-blue-500/80 rounded-full animate-gentle-drift shadow-md" style={{animationDelay: '1.5s'}}></div>
       </div>
       
       {/* Bottom Text */}
