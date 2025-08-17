@@ -151,7 +151,7 @@ export function LoginForm({
 
               <Button
                 type="submit"
-                className="w-full h-14 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 text-lg"
+                className="w-full h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 text-base"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -168,16 +168,16 @@ export function LoginForm({
         </div>
 
         {/* Right Side - Welcome Section */}
-        <div className="relative lg:pl-12">
+        <div className="relative lg:pl-8">
           {/* Large Welcome Text */}
           <div className="relative z-10">
             
-            <h1 className="text-6xl lg:text-8xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-200 dark:to-gray-400 bg-clip-text text-transparent mb-8 leading-tight mt-16">
+            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-200 dark:to-gray-400 bg-clip-text text-transparent mb-6 leading-tight mt-8">
               WELCOME
             </h1>
             
-            <div className="space-y-6 max-w-md">
-              <p className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-4 max-w-sm">
+              <p className="text-base lg:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 Step into your productivity workspace where every task moves you closer to success.
               </p>
               
