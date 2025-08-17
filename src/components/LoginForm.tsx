@@ -223,11 +223,11 @@ export function LoginForm({
       {/* Bottom Text */}
       <div className="text-center mt-8 text-sm text-gray-600 dark:text-gray-300">
         By continuing, you agree to our{" "}
-        <a href="#" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">
+        <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
           Terms of Service
         </a>{" "}
         and{" "}
-        <a href="#" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">
+        <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
           Privacy Policy
         </a>
       </div>
