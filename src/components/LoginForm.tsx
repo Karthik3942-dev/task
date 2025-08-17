@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { useAuthStore } from "../store/authStore";
+import { ROLES } from "../lib/firebase";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Moon, Sun, Lock, User } from "lucide-react";
@@ -102,8 +103,13 @@ export function LoginForm({
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                 <User className="w-5 h-5 text-white" />
               </div>
-              <div className="text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
-                ENKONIX TAS
+              <div>
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
+                  ENKONIX TAS
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  Employee & Team Lead Portal
+                </div>
               </div>
             </div>
 
@@ -111,14 +117,14 @@ export function LoginForm({
               <div className="space-y-3">
                 <div>
                   <Label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 block">
-                    USERNAME
+                    EMAIL ADDRESS
                   </Label>
                   <div className="relative">
                     <User className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
                     <Input
                       id="email"
                       type="email"
-                      placeholder="Enter your username"
+                      placeholder="Enter your work email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
