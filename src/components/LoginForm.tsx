@@ -141,17 +141,17 @@ export function LoginForm({
 
               <div className="flex items-center justify-between text-sm">
                 <label className="flex items-center">
-                  <input type="checkbox" className="rounded border-gray-300 dark:border-gray-600 text-violet-600 focus:ring-violet-500/20" />
+                  <input type="checkbox" className="rounded border-gray-300 dark:border-gray-600 text-cyan-600 focus:ring-cyan-500/20" />
                   <span className="ml-2 text-gray-600 dark:text-gray-400">Remember me</span>
                 </label>
-                <a href="#" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 font-medium">
+                <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 font-medium">
                   Forgot your password?
                 </a>
               </div>
 
               <Button
                 type="submit"
-                className="w-full h-14 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 text-lg"
+                className="w-full h-14 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 text-lg"
                 disabled={isLoading}
               >
                 {isLoading ? (
