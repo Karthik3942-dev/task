@@ -113,6 +113,19 @@ export function LoginForm({
               </div>
             </div>
 
+            {/* User Types Info */}
+            <div className="mb-4 p-3 bg-cyan-50 dark:bg-cyan-900/20 rounded-xl border border-cyan-200 dark:border-cyan-800">
+              <div className="flex items-center gap-2 mb-2">
+                <User className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                <span className="text-sm font-medium text-cyan-700 dark:text-cyan-300">Access Levels</span>
+              </div>
+              <div className="text-xs text-cyan-600 dark:text-cyan-400 space-y-1">
+                <div>• <strong>Team Lead:</strong> Manage team, assign tasks, view reports</div>
+                <div>• <strong>Employee:</strong> View projects, manage assigned tasks</div>
+                <div>• <strong>Admin:</strong> Full system access and user management</div>
+              </div>
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-3">
                 <div>
