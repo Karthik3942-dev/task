@@ -557,3 +557,105 @@ p {
 .dark .scrollbar-thumb-gray-600::-webkit-scrollbar-thumb {
   background-color: rgba(75, 85, 99, 0.5);
 }
+
+/* Custom animations for LoginForm */
+@keyframes floating-circle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+@keyframes orbit-reverse {
+  0% { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+  100% { transform: rotate(-360deg) translateX(15px) rotate(360deg); }
+}
+
+@keyframes scale-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes gentle-drift {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-3px) translateX(2px); }
+  50% { transform: translateY(-5px) translateX(0px); }
+  75% { transform: translateY(-3px) translateX(-2px); }
+}
+
+@keyframes parallax-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  33% { transform: translateY(-4px) scale(1.05); }
+  66% { transform: translateY(2px) scale(0.95); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.7; box-shadow: 0 0 5px currentColor; }
+  50% { opacity: 1; box-shadow: 0 0 15px currentColor; }
+}
+
+@keyframes ripple {
+  0% { transform: scaleX(1); opacity: 0.8; }
+  50% { transform: scaleX(1.2); opacity: 0.4; }
+  100% { transform: scaleX(1); opacity: 0.8; }
+}
+
+.animate-floating-circle {
+  animation: floating-circle 4s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 8s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-reverse 6s linear infinite;
+}
+
+.animate-scale-pulse {
+  animation: scale-pulse 3s ease-in-out infinite;
+}
+
+.animate-gentle-drift {
+  animation: gentle-drift 5s ease-in-out infinite;
+}
+
+.animate-parallax-float {
+  animation: parallax-float 4s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 3s ease-in-out infinite;
+}
+
+/* Border effects */
+.moving-border {
+  position: relative;
+  background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+  background-size: 400% 400%;
+  animation: moving-border 8s ease infinite;
+}
+
+.rotating-border {
+  position: relative;
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), transparent, rgba(168, 85, 247, 0.1));
+  background-size: 300% 300%;
+  animation: rotating-border 6s ease infinite;
+}
+
+@keyframes moving-border {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes rotating-border {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
