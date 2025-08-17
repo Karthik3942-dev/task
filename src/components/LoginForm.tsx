@@ -190,18 +190,18 @@ export function LoginForm({
         <div className="absolute -top-6 -right-6 w-8 h-8 bg-gradient-to-br from-cyan-300/60 to-blue-400/70 dark:from-cyan-700/70 dark:to-blue-600/80 rounded-full opacity-70 animate-floating-circle shadow-lg"></div>
         <div className="absolute top-12 -right-8 w-4 h-4 bg-gradient-to-br from-blue-300/70 to-cyan-400/80 dark:from-blue-600/80 dark:to-cyan-500/90 rounded-full opacity-50 animate-orbit shadow-md" style={{animationDelay: '1s'}}></div>
         <div className="absolute bottom-12 -left-4 w-3 h-3 bg-gradient-to-br from-cyan-300/50 to-blue-400/60 dark:from-cyan-600/70 dark:to-blue-500/80 rounded-full animate-gentle-drift shadow-md" style={{animationDelay: '1.5s'}}></div>
-      </div>
-      
-      {/* Bottom Text */}
-      <div className="text-center mt-6 text-xs text-gray-600 dark:text-gray-300">
-        By continuing, you agree to our{" "}
-        <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
-          Terms of Service
-        </a>{" "}
-        and{" "}
-        <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
-          Privacy Policy
-        </a>
+
+        {/* Bottom Text */}
+        <div className="text-center mt-6 text-xs text-gray-600 dark:text-gray-300">
+          By continuing, you agree to our{" "}
+          <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
+            Terms of Service
+          </a>{" "}
+          and{" "}
+          <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
+            Privacy Policy
+          </a>
+        </div>
       </div>
     </div>
   );
