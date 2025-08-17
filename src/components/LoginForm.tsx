@@ -201,14 +201,14 @@ export function LoginForm({
           </div>
           
           {/* Decorative Elements - repositioned to avoid text overlap */}
-          <div className="absolute -top-8 -right-8 w-12 h-12 bg-gradient-to-br from-violet-300/70 to-purple-400/80 dark:from-violet-700/80 dark:to-purple-600/90 rounded-full opacity-75 animate-floating-circle shadow-lg"></div>
-          <div className="absolute top-16 -right-12 w-6 h-6 bg-gradient-to-br from-purple-300/80 to-indigo-400/90 dark:from-purple-600/90 dark:to-indigo-500/95 rounded-full opacity-60 animate-orbit shadow-md" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-16 -right-10 w-10 h-10 bg-gradient-to-br from-indigo-300/70 to-violet-400/80 dark:from-indigo-600/80 dark:to-violet-500/90 rounded-full opacity-65 animate-scale-pulse shadow-lg" style={{animationDelay: '2s'}}></div>
+          <div className="absolute -top-8 -right-8 w-12 h-12 bg-gradient-to-br from-cyan-300/70 to-blue-400/80 dark:from-cyan-700/80 dark:to-blue-600/90 rounded-full opacity-75 animate-floating-circle shadow-lg"></div>
+          <div className="absolute top-16 -right-12 w-6 h-6 bg-gradient-to-br from-blue-300/80 to-cyan-400/90 dark:from-blue-600/90 dark:to-cyan-500/95 rounded-full opacity-60 animate-orbit shadow-md" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-16 -right-10 w-10 h-10 bg-gradient-to-br from-cyan-300/70 to-blue-400/80 dark:from-cyan-600/80 dark:to-blue-500/90 rounded-full opacity-65 animate-scale-pulse shadow-lg" style={{animationDelay: '2s'}}></div>
           
           {/* Additional animated particles - improved contrast */}
-          <div className="absolute top-32 -right-16 w-4 h-4 bg-violet-400/80 dark:bg-violet-300/90 rounded-full animate-gentle-drift shadow-sm" style={{animationDelay: '0.5s'}}></div>
-          <div className="absolute top-48 -right-6 w-5 h-5 bg-purple-400/60 dark:bg-purple-300/75 rounded-full animate-parallax-float shadow-md" style={{animationDelay: '3s'}}></div>
-          <div className="absolute bottom-32 -right-14 w-3 h-3 bg-indigo-400/85 dark:bg-indigo-300/95 rounded-full animate-glow-pulse shadow-sm" style={{animationDelay: '4.5s'}}></div>
+          <div className="absolute top-32 -right-16 w-4 h-4 bg-cyan-400/80 dark:bg-cyan-300/90 rounded-full animate-gentle-drift shadow-sm" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-48 -right-6 w-5 h-5 bg-blue-400/60 dark:bg-blue-300/75 rounded-full animate-parallax-float shadow-md" style={{animationDelay: '3s'}}></div>
+          <div className="absolute bottom-32 -right-14 w-3 h-3 bg-cyan-400/85 dark:bg-cyan-300/95 rounded-full animate-glow-pulse shadow-sm" style={{animationDelay: '4.5s'}}></div>
           
           {/* Floating geometric shapes - enhanced visibility */}
           <div className="absolute top-24 -right-20 w-5 h-5 bg-gradient-to-br from-violet-400/50 to-purple-500/70 dark:from-violet-500/70 dark:to-purple-400/90 rounded-sm rotate-45 animate-orbit-reverse shadow-md" style={{animationDelay: '2.2s'}}></div>
