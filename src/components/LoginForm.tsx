@@ -46,24 +46,31 @@ export function LoginForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (email.trim().toLowerCase() !== "ceo@enkonix.in") {
-      toast.error("Unauthorized email access");
-      return;
-    }
-
     setIsLoading(true);
+
     try {
       await signIn(email, password);
       toast.success("Successfully logged in!");
-      
+
       // Generate new quote for next login
       const randomQuote = taskQuotations[Math.floor(Math.random() * taskQuotations.length)];
       setCurrentQuote(randomQuote);
-      
+
       navigate("/");
-    } catch (err) {
-      toast.error("Invalid login credentials");
+    } catch (err: any) {
+      // Handle different error types for better user experience
+      if (err.code === 'auth/user-not-found') {
+        toast.error("No account found with this email. Please contact admin.");
+      } else if (err.code === 'auth/wrong-password') {
+        toast.error("Incorrect password. Please try again.");
+      } else if (err.code === 'auth/invalid-email') {
+        toast.error("Please enter a valid email address.");
+      } else if (err.code === 'auth/too-many-requests') {
+        toast.error("Too many failed attempts. Please try again later.");
+      } else {
+        toast.error("Login failed. Please check your credentials.");
+      }
+      console.error('Login error:', err);
     } finally {
       setIsLoading(false);
     }
