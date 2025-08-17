@@ -182,16 +182,16 @@ export function LoginForm({
               </p>
               
               {/* Quote Section */}
-              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg rotating-border">
+              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-xl p-4 shadow-lg rotating-border">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm font-bold">"</span>
+                  <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-xs font-bold">"</span>
                   </div>
                   <div>
-                    <p className="text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
+                    <p className="text-sm text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
                       {currentQuote}
                     </p>
-                    <p className="text-sm text-cyan-600 dark:text-cyan-400 mt-3 font-semibold">
+                    <p className="text-xs text-cyan-600 dark:text-cyan-400 mt-2 font-semibold">
                       — ENKONIX
                     </p>
                   </div>
@@ -221,7 +221,7 @@ export function LoginForm({
       </div>
       
       {/* Bottom Text */}
-      <div className="text-center mt-8 text-sm text-gray-600 dark:text-gray-300">
+      <div className="text-center mt-6 text-xs text-gray-600 dark:text-gray-300">
         By continuing, you agree to our{" "}
         <a href="#" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 underline underline-offset-2 transition-colors">
           Terms of Service
