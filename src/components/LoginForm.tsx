@@ -70,11 +70,11 @@ export function LoginForm({
   };
 
   return (
-    <div className={cn("w-full max-w-4xl mx-auto", className)} {...props}>
-      <div className="grid lg:grid-cols-2 gap-6 lg:gap-0 items-center min-h-[500px]">
-        {/* Left Side - Login Form */}
-        <div className="relative z-20 lg:pr-8">
-          <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl shadow-xl p-6 lg:p-8 moving-border">
+    <div className={cn("min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black flex items-center justify-center p-4", className)} {...props}>
+      <div className="w-full max-w-md mx-auto">
+        {/* Centered Login Form */}
+        <div className="relative z-20">
+          <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl shadow-xl p-6 lg:p-8 moving-border border border-gray-200/50 dark:border-gray-700/50">
             {/* Theme Toggle */}
             <div className="flex justify-end mb-6">
               <button
