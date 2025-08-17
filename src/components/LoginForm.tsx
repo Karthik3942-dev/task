@@ -205,10 +205,17 @@ export function LoginForm({
                   {currentQuote}
                 </p>
                 <p className="text-xs text-cyan-600 dark:text-cyan-400 mt-2 font-semibold">
-                  — ENKONIX
+                  — ENKONIX Team
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Role-based welcome message */}
+          <div className="mt-3 text-center">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              Welcome back! Sign in to access your role-based dashboard
+            </p>
           </div>
         </div>
 
