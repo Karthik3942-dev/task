@@ -79,11 +79,11 @@ export function LoginForm({
             <div className="flex justify-end mb-8">
               <button
                 onClick={toggleTheme}
-                className="p-3 rounded-2xl bg-gradient-to-br from-violet-50 to-purple-50 dark:from-slate-800 dark:to-violet-900/50 border border-violet-200/50 dark:border-violet-500/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group backdrop-blur-sm"
+                className="p-3 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-slate-800 dark:to-cyan-900/50 border border-cyan-200/50 dark:border-cyan-500/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group backdrop-blur-sm"
                 title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
               >
                 {theme === 'light' ? (
-                  <Moon className="w-5 h-5 text-violet-600 group-hover:text-violet-700 transition-colors" />
+                  <Moon className="w-5 h-5 text-cyan-600 group-hover:text-cyan-700 transition-colors" />
                 ) : (
                   <Sun className="w-5 h-5 text-yellow-500 group-hover:text-yellow-600 transition-colors" />
                 )}
@@ -92,10 +92,10 @@ export function LoginForm({
 
             {/* Logo */}
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
                 <User className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 dark:from-violet-400 dark:to-purple-400 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
                 ENKONIX TAS
               </div>
             </div>
