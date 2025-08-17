@@ -638,14 +638,14 @@ p {
 /* Border effects */
 .moving-border {
   position: relative;
-  background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(6, 182, 212, 0.1), transparent);
   background-size: 400% 400%;
   animation: moving-border 8s ease infinite;
 }
 
 .rotating-border {
   position: relative;
-  background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), transparent, rgba(168, 85, 247, 0.1));
+  background: linear-gradient(45deg, rgba(6, 182, 212, 0.1), transparent, rgba(59, 130, 246, 0.1));
   background-size: 300% 300%;
   animation: rotating-border 6s ease infinite;
 }
