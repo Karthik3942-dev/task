@@ -1,0 +1,65 @@
+* {
+    margin:10;
+    padding:10;
+    box-sizing:border-box;
+}
+body{
+   
+   <font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif >
+}
+nav{
+    background-color: "#444";
+    padding:10px;
+}
+nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0; 
+    display:flex; \*how it will look lihe either row or column
+    flex-direction:row;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    color:" #444"
+    text-decoration:aqua
+}
+main{
+
+
+}
+article{
+    border-color: blueviolet;
+    border-radius: :600PX;
+    background-color: lightslategrey;
+    padding: 20;
+    width:100px;
+    border-radius: 200px;
+}
+aside{
+    background-color: lightslategrey;
+    padding: 20;
+    width:100px;
+    border-radius: 5px;
+}
+footer{
+    background-color: magenta;
+    color:moccasin;
+    text-align: center;
+    padding: 10px;
+    width:100%;
+}
+</style>
+</head>
+<body>
+<header> <h1 style="color:darkred"> GOOD MORNING FRIENDS </h1>
+</header>
+<nav>
+<ul>
+    <li> <a href="a" >friends </a></li>
+    <li> <a href="a" >jeevitha </a></li>
+    <li> <a href="a" >prameela </a></li>
+    <li> <a href="a" >karthik </a></li>
+</ul>
+</nav>
